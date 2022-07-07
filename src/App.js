@@ -19,7 +19,7 @@ function App() {
   const [modalYear, setModalYear] = useState()
 
   useEffect(() => {
-    axios.get("https://yts.torrentbay.to/api/v2/list_movies.json?limit=50").then((res) => {
+    axios.get("/api/v2/list_movies.json?limit=50").then((res) => {
       setMenuList(res.data.data.movies)
     })
   })
