@@ -1,38 +1,250 @@
-.App {
-  text-align: center;
+body {
+  margin: 0
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header */
+.header {
+  background-color: #070707;
+  color: #ffffff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 40px;
+  margin: 0 0 10px;
+  padding: 20px 29px 12px;
+  width: 100%
+}
+img.logo-icon {
+  width: 180px;
+  height: 17px;
+  margin: 1px 40px 9px 0;
+  object-fit: contain;
+}
+@media screen and (max-width: 640px) {
+  .header-right{
+    display: none
+  }
+}
+@media screen and (min-width: 640px) {
+  .header-right{
+    display: flex;
+    width: 80%;
+  }
+  .header-text {
+    position: relative;
+    min-width: 10%;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.07;
+    letter-spacing: normal;
+    text-align: center;
+    color: #8f8f8f;
+  }
+  .search-form{
+    display:flex;
+    position: relative;
+    width: 50%;
+
+  }
+  .search-box {
+    background-color: #070707;
+    color: #ffffff;
+    width: 100%;
+    border: none
+  }
+  .search-button {
+    width: 21px;
+    height: 21px;
+    background-color: #070707;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+
+
+
+
+/* Navbar */
+.navbar {
+  display: inline-flex;
+  overflow-x: auto;
+  text-align: center;
+  padding: auto;
+  width: 100%;
+}
+.navbar-item {
+  background-color: #070707 !important;
+  color: #ffffff !important;
+  width: 200px !important;
+  height: 50px !important;
+  margin: 0 5px;
+  line-height: 50px !important;
+  cursor: pointer;
+}
+.navbar .css-ptiqhd-MuiSvgIcon-root {
+  background-color: #ff2e43;
+  border-radius: 50%;
+}
+
+/* Suggestion */
+@media screen and (min-width: 640px) {
+  .suggestion {
+    margin-left: 40px;
+    margin-top: 70px;
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .suggestion {
+    width: 99% !important;
+  }
+  .suggestion-tab {
+    width: 33% !important;
+    font-size: small;
+  }
+}
+
+/* Menu */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 17rem));
+  gap: 5px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.menu-item {
+  margin: 5px;
+	padding: 5px;
+	overflow: hidden;
+  z-index: 0
+}
+.menu-item-img {
+  width: 360px;
+  height: 203.8px;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  background-color: #000;
+  z-index: 0
 }
 
-.App-link {
-  color: #61dafb;
+/* Modal */
+.modal {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.modal-overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0, 0.6);
+}
+.modal-container {
+  top: 0;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+  border: 1px solid #000;
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+  padding-top: 30px;
+}
+.modal-subcontainer-1 {
+  display: flex;
+  margin-left: 20px;
+}
+.modal-subcontainer-2 {
+  margin-left: 20px;
+}
+.modal-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.modal-title {
+  font-family: Montserrat;
+  font-size: 30px;
+}
+.modal-year {
+  font-family: Montserrat;
+  font-size: 15.5px;
+}
+.modal-image {
+  position: absolute;
+  width: 90%;
+  margin: 80px 5%;
+}
+.close-button {
+  position:fixed;
+  right: 0;
+  top: 0;
+  background-color: rgba(0,0,0, 0.6);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Footer */
+.footer {
+  font-family: Montserrat;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  margin-top: 20px;
+}
+.footer-top {
+  background-color: #070707;
+  color: #ffffff;
+  display: flex;
+  height: 30px;
+  padding-left: 2%;
+}
+.footer-text-contact {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  padding: 8px;
+}
+.footer-text-email {
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 2.08;
+  padding: 8px
+}
+.footer-text-copyright {
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 2.08;
+  color: #9b9b9b;
+  padding: 8px;
+  position: absolute;
+  right: 8%;
+}
+.footer-top .social-media {
+  position: absolute;
+  right: 2%
+}
+
+.footer-bottom {
+  color: #070707;
+  background-color: #ffffff;
+  display: flex;
+  padding-left: 2%;
+}
+.footer-bottom .black-logo-icon {
+  position: absolute;
+  right: 2%;
+  margin-top: 10px;
+  width: 180px;
+  height: 17px;
+  object-fit: contain;
+}
+.footer-bottom-text {
+  padding: 8px;
 }
