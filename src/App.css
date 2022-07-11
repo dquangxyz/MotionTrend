@@ -116,7 +116,8 @@ img.logo-icon {
   margin: 5px;
 	padding: 5px;
 	overflow: hidden;
-  z-index: 0
+  z-index: 0;
+  cursor: pointer;
 }
 .menu-item-img {
   width: 360px;
@@ -124,7 +125,9 @@ img.logo-icon {
   object-fit: cover;
   mix-blend-mode: multiply;
   background-color: #000;
-  z-index: 0
+  z-index: 0;
+  cursor: pointer;
+  
 }
 
 /* Modal */
